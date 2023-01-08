@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Selected:  <p id="selected"></p></h3>
+    <div onclick="onDivClickHandler(event)" div-name="Div N1 clicked" class="div__1">
+        <p>Some text</p>
+    </div>
+    <div onclick="onDivClickHandler(event)" div-name="Div N2 clicked" class="div__2">
+        <button onclick="onFirstButtonHandler(event)" class="btn">BTN1</button>
+    </div>
+    <div onclick="onDivClickHandler(event)" div-name="Div N3 clicked" class="div__3">
+        <button onclick="onSecondButtonHandler(event)" class="btn">BTN2</button>
+    </div>
+    <div onclick="onDivClickHandler(event)" div-name="Div N4 clicked" class="div__4"></div>
+    <input id="body-input" type="text">
+    <button disabled id="btn-ok">OK</button>
+    <script src="script.js"></script>
+</body>
+</html>
