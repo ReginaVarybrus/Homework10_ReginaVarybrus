@@ -24,10 +24,22 @@ function onSecondButtonHandler(event) {
     event.stopPropagation();
 }
 
-enterTxt.addEventListener('input', (event) => {
-    enterTxt.value = enterTxt.value.toLowerCase();
+enterTxt.addEventListener('keypress', checkLetter);
+
+function checkLetter(event) {
+    var charCode = event.charCode;
+    if (charCode != 0) {
+        if (charCode < 97 || charCode > 122) {
+            event.preventDefault();
+        } 
+    }
+}
+
+enterTxt.addEventListener('input', () => {
     alertBtn.disabled = (enterTxt.value == '');
 });
+
+
 
 alertBtn.addEventListener('click', (event) => {
     if (enterTxt.value != '') {
